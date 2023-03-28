@@ -1,0 +1,18 @@
+---
+- name: Creacion de primeros usuarios
+  hosts: test_server
+  
+  tasks:
+  - name: Crear usuario 1 y asignarle directorio de inicio y un shell
+    ansible.builtin.user:
+      name: user1
+      home: /home/admin/
+      shell: /bin/bash
+
+  - name: Crear usuario 2 y asignarle directorio de inicio y un shell
+    ansible.builtin.user:
+      name: user2
+      home: /home/client/
+      shell: /bin/bash
+
+...
